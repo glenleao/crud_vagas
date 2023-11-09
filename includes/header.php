@@ -11,5 +11,6 @@
       <div class="jumbotron bg-danger p-3">
         <h1>GLN Vagas</h1>
         <p>Exemplo de CRUD com PHP orientado a objetos </p>
+        <a href="https://www.youtube.com/watch?v=uG64BgrlX7o&t=0s" target="_blank"><button class="btn btn-dark">Link da aula</button></a>
       </div>
 

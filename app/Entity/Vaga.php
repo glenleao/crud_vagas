@@ -13,7 +13,7 @@ class Vaga {
 	public $ativo;
 	public $data;
 
-// MÉTODO RESPONSÁVEL POR CADASTRAR UMA NOVA VAGA NO BANCO
+	// MÉTODO RESPONSÁVEL POR CADASTRAR UMA NOVA VAGA NO BANCO
 	public function cadastrar(){
 		$this->data = date('Y-m-d H:i:s');
 
@@ -30,9 +30,8 @@ class Vaga {
 						'data'      =>$this->data
 					]);
 
-// retorna sucesso
+		// retorna sucesso
 		return true;
-
 	}
 
 	// metodo responsavel por atualizar a vaga no banco
@@ -43,8 +42,9 @@ class Vaga {
 						'ativo'     =>$this->ativo,
 						'data'      =>$this->data
 					]);
-		}
-		// metodo responsavel por excluir a vaga do banco
+	}
+
+	// metodo responsavel por excluir a vaga do banco
 	public function excluir(){
 		return (new Database('vagas'))->delete('id= '.$this->id);
 	}

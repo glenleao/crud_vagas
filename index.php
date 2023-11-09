@@ -5,7 +5,7 @@
 	use \App\Entity\Vaga;
 
 	$vagas = Vaga::getVagas();
-			// echo "<pre>"; print_r($vagas); echo "</pre>"; exit;
+	// echo "<pre>"; print_r($vagas); echo "</pre>"; exit;
 
 
 	include __DIR__.'/includes/header.php';

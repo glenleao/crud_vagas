@@ -17,29 +17,25 @@
       <textarea class="form-control" name="descricao" rows="5"><?=$obVaga->descricao?></textarea>
     </div>
 
-<div class="form-group mt-3">
-	<label>Status</label>
-			<div class="form-check form-check-inline">
-		     <div>
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="ativo" value="s" checked> Ativo
-            </label>
-          </div>
+    <div class="form-group mt-3">
+    	<label>Status</label>
 
-          <div class="form-check form-check-inline">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="ativo" value="n" <?=$obVaga->ativo == 'n' ? 'checked' : ''?>> Inativo
-            </label>
-          </div>
-      </div>
-</div>
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="ativo" value="s" checked> Ativo
+          </label>
+        </div>
 
-<div class="form-group mt-4">
-	<button class="btn btn-success" type="submit">Enviar</button>
-	
-</div>
-		
+        <div class="form-check form-check-inline">
+          <label class="form-check-label">
+            <input class="form-check-input" type="radio" name="ativo" value="n" <?=$obVaga->ativo == 'n' ? 'checked' : ''?>> Inativo
+          </label>
+        </div>
+    </div>
+
+    <div class="form-group mt-4">
+    	<button class="btn btn-success" type="submit">Enviar</button>   	
+    </div>		
 	</form>
 </main>
 

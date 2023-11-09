@@ -12,13 +12,14 @@
     </div>
 
     <div class="form-group">
-      <a href="index.php"><button  type="button" class="btn btn-success">Cancelar</button></a>
-      <button type="submit" type="button" name="excluir" class="btn btn-danger">Excluir</a>
+      <a href="index.php">
+      	<button type="button" class="btn btn-success">Cancelar</button>
+      </a>
+      <button type="submit" type="button" name="excluir" class="btn btn-danger">Excluir</button>
     </div>
 
     <div class="form-group mt-4">
-    	<button class="btn btn-success" type="submit">Enviar</button>
-    	
+    	<button class="btn btn-success" type="submit">Enviar</button> 	
     </div>
 		
 	</form>

@@ -7,31 +7,35 @@ use \PDOException;
 
 class Database{
 
-
 	const HOST = 'localhost';
 	const NAME = 'wdev_vagas';
 	const USER = 'root';
 	const PASS = '';
 
+	// nome da tabela a ser manipulada
 	private $table;
+
+	// instancia de conexao com o banco de dados
 	private $connection;
 
+	// define a tabela, instancia e conexao
 	public function __construct($table = null){
 		$this->table = $table;
 		$this->setConnection();
 	}
 
+	// metodo q cria a conexao com o Bd
 	private function setConnection(){
 		try{
 			$this->connection = new PDO('mysql:host='.self::HOST.';dbname='.self::NAME, self::USER, self::PASS);
 			$this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		}catch(PDOException $e){
 			die('ERROR: '.$e->getMessage());
-		}
+			}
 
 	}
 
-	// metodo responsavel por executar queries dentro do banco de dados
+	// metodo responsavel por executar queries (consultas) dentro do banco de dados
 	public function execute($query, $params = []){
 		try{
 			$statement = $this->connection->prepare($query);
@@ -39,7 +43,7 @@ class Database{
 			return $statement;
 		}catch(PDOException $e){
 			die('ERROR: '.$e->getMessage());
-		}
+			}
 	}
 
 	public function insert($values){
@@ -52,7 +56,6 @@ class Database{
 
 		// executa o insert
 		$this->execute($query, array_values($values));
-
 
 		return $this->connection->lastInsertId();
 	}
@@ -67,8 +70,6 @@ class Database{
 
 		return $this->execute($query);
 	}
-
-
 
 	// metodo responsavel por executar a atualizacao no banco de dados
 
